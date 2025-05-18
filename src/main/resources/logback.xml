@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<configuration>
+    <property name="DEV_HOME" value="/app/medium-log-app"/>
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder class="net.logstash.logback.encoder.LogstashEncoder">
+            <version>1.0.0</version>
+        </encoder>
+    </appender>
+    <logger name='MediumApp' level="info" additivity="false">
+        <appender-ref ref="STDOUT"/>
+    </logger>
+    <root level="info">
+        <appender-ref ref="STDOUT"/>
+    </root>
+</configuration>
